@@ -1,0 +1,47 @@
+# Python & bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+build/
+dist/
+*.egg-info/
+
+# Unit tests and coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Logs, scratch files, and work directories
+*.log
+.dev.log
+*.tmp
+video_work/
+veo_clips/
+tts_probe.mp3
+
+# Checkpoints and large tensor weights
+out/
+out_*/
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.npy
+
+# Datasets and raw files
+data/
+data_clean/
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
