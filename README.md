@@ -37,15 +37,7 @@ Experiments trained on the complete [Tiny Shakespeare](https://raw.githubusercon
 
 ## Presentation & Media
 
-This repository includes automated scripts to generate presentation materials and multimedia summaries:
-
-- **Slide Deck**: [`pico-gpt-presentation.pptx`](pico-gpt-presentation.pptx) — An 8-slide 16:9 presentation covering architecture, results, test rigor, and lessons learned.
-- **Video Trailers** (located in [`media/`](media/)):
-  - `option_A_trailer.mp4`: Dramatic 1-minute narrated project trailer.
-  - `option_B_model_presents.mp4`: The model introduces itself and delivers its own generated Shakespeare acceptance speech.
-  - `option_C_cinematic.mp4`: Cinematic cut with Ken Burns camera motion and 2.39:1 letterbox bars.
-
-Slide previews are archived in [`media/slides/`](media/slides/).
+- **Slide Deck**: [`pico-gpt-presentation.pptx`](pico-gpt-presentation.pptx) — An 8-slide 16:9 presentation covering architecture, results, test rigor, and lessons learned. Built by `make_deck.py`.
 
 ---
 
@@ -64,12 +56,7 @@ pico-gpt/
 │   ├── test_model.py         # Causal mask, KV-cache, SDPA parity tests
 │   └── test_train.py         # LR schedule, grad accum, eval tests
 ├── media/                    # Media assets & generated outputs
-│   ├── loss_curve.png        # Training/validation loss curves
-│   ├── model_speech.txt      # Raw checkpoint text generation
-│   ├── slides/               # Rendered presentation slides (PNG)
-│   ├── option_A_trailer.mp4  # Narrated project trailer
-│   ├── option_B_model_presents.mp4  # Self-presentation video
-│   └── option_C_cinematic.mp4       # Cinematic trailer
+│   └── loss_curve.png        # Training/validation loss curves
 ├── pico-gpt-presentation.pptx# Widescreen presentation deck
 ├── prepare_bpe.py            # Download corpus & train BPE tokenizer
 ├── prepare.py                # Legacy character-level data preparation
@@ -77,7 +64,6 @@ pico-gpt/
 ├── sample.py                 # Text generation CLI with temperature & top-k
 ├── report.py                 # Generate loss curves & sample summaries
 ├── make_deck.py              # Programmatically builds presentation deck
-├── make_videos.py            # Synthesizes speech & compiles MP4 videos
 ├── pyproject.toml            # Package configuration & dependencies
 ├── LICENSE                   # MIT License
 └── README.md
@@ -97,7 +83,7 @@ cd pico-gpt
 pip install -e .
 ```
 
-To install testing and media generation utilities:
+To install testing and deck generation utilities:
 
 ```bash
 pip install -e ".[dev,media]"
